@@ -20,7 +20,9 @@ RUN cd /tmp && npm install --production
 
 # create an app folder
 RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
-VOLUME /opt/app/node_modules
+
+# no need in production
+#VOLUME /opt/app/node_modules
 
 
 # Set enviroment to production

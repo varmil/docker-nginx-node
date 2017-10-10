@@ -20,10 +20,10 @@ RUN apt-get install -y nano wget dialog net-tools
 # Download and Install Nginx
 RUN apt-get install -y nginx
 
-
+# Add the web-data user to own the source
 RUN chown -R www-data:www-data /var/lib/nginx
 
-# Add default nginx config
+# Add our custom nginx config that configs the nginx server
 RUN rm -v /etc/nginx/nginx.conf
 ADD nginx-sites.conf /etc/nginx/nginx.conf
 

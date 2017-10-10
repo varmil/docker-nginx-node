@@ -1,5 +1,5 @@
-# Compose file for Hours
-version: "2"
+# Compose file 
+version: "3"
 
 services:
   proxy:
@@ -15,3 +15,4 @@ services:
     build: ./web/
     ports:
       - "7000"
+      
